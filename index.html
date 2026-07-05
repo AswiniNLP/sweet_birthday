@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday To You</title>
     
-    <!-- Animate.css for smooth entrance animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
-    <!-- Canvas Confetti Library -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <style>
@@ -231,21 +229,15 @@
 </head>
 <body>
 
-    <!-- Continuous Floating Background Elements -->
     <div id="floating-container"></div>
 
-    <!-- Audio Element -->
     <audio id="bg-music" loop src="your-audio-file.mp3"></audio>
 
-    <!-- Corner Bubu Dudu (Hidden on Landing, Revealed on Main) -->
-    <!-- You can swap these Tenor links if you find other Bubu Dudu GIFs you prefer -->
-    <img src="https://media.tenor.com/V7h4I0eYFugAAAAi/bubu-dudu-kisses.gif" class="bubu-dudu-corner left" id="corner-left" alt="Bubu Dudu">
-    <img src="https://media.tenor.com/15ZtG_J90JIAAAAi/bubu-dudu-love.gif" class="bubu-dudu-corner right" id="corner-right" alt="Bubu Dudu">
+    <img src="left-bubu.gif" class="bubu-dudu-corner left" id="corner-left" alt="Bubu Dudu">
+    <img src="right-bubu.gif" class="bubu-dudu-corner right" id="corner-right" alt="Bubu Dudu">
 
-    <!-- Landing Screen -->
     <div id="landing">
-        <!-- Cute Bubu Dudu Welcome Animation -->
-        <img src="https://media.tenor.com/qE4JvM8807QAAAAi/bubu-dudu-bubu.gif" alt="Bubu Dudu Waiting" class="bubu-dudu-landing animate__animated animate__bounceInDown">
+        <img src="landing-bubu.gif" alt="Bubu Dudu Waiting" class="bubu-dudu-landing animate__animated animate__bounceInDown">
         
         <h2 class="animate__animated animate__fadeInUp animate__delay-1s" style="color: white; font-size: 2.2rem; margin-bottom: 15px; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">
             I have something special for you...
@@ -256,22 +248,18 @@
         </button>
     </div>
 
-    <!-- Main Content -->
     <div id="main-content">
-        <!-- Cute Bubu Dudu Hugging Header -->
-        <img src="https://media.tenor.com/gA3qHw5KxO0AAAAi/bubu-dudu-bubu.gif" alt="Bubu Dudu Love" class="bubu-dudu-main animate__animated animate__zoomIn animate__delay-1s">
+        <img src="main-bubu.gif" alt="Bubu Dudu Love" class="bubu-dudu-main animate__animated animate__zoomIn animate__delay-1s">
         
         <h1 class="animate__animated animate__heartBeat animate__delay-2s">Happy Birthday, My Love!</h1>
         <p class="subtitle animate__animated animate__fadeIn animate__delay-3s">
             I love you my Sweetheart. Wishing you the most wonderful day filled with joy and love. Here are some of my favorite memories with you.
         </p>
 
-        <!-- Video Section (Optional) -->
         <div class="video-container animate__animated animate__fadeInUp animate__delay-3s">
             <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
         </div>
 
-        <!-- Photo Gallery -->
         <div class="gallery">
             <div class="photo-card animate__animated animate__zoomIn animate__delay-4s">
                 <img src="https://via.placeholder.com/400x300?text=Photo+1" alt="Memory 1">
