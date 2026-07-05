@@ -138,7 +138,7 @@
             width: 120px;
             z-index: 5;
             pointer-events: none;
-            opacity: 0; /* Hidden initially, shown after click */
+            opacity: 0; 
             transition: opacity 2s ease-in;
         }
 
@@ -163,59 +163,20 @@
             color: #4b5563;
         }
 
-        /* --- Photo Gallery Grid --- */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 60px;
-        }
-
-        .photo-card {
+        /* --- Local Autoplay Video --- */
+        .video-player-local {
+            max-width: 800px;
+            margin: 0 auto 50px auto;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background: white;
-            padding: 10px;
-        }
-
-        .photo-card:hover {
-            transform: scale(1.05) translateY(-5px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
-
-        .photo-card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-            border-radius: 15px;
-        }
-
-        /* --- Responsive Video --- */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; 
-            height: 0;
-            overflow: hidden;
-            border-radius: 20px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            margin-bottom: 50px;
-            transition: transform 0.3s ease;
-        }
-        
-        .video-container:hover {
-            transform: scale(1.02);
+            background: #000;
         }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .video-player-local video {
             width: 100%;
-            height: 100%;
-            border: none;
+            height: auto;
+            display: block;
         }
 
         /* Romantic Footer */
@@ -253,26 +214,14 @@
         
         <h1 class="animate__animated animate__heartBeat animate__delay-2s">Happy Birthday, My Love!</h1>
         <p class="subtitle animate__animated animate__fadeIn animate__delay-3s">
-            I love you my Sweetheart. Wishing you the most wonderful day filled with joy and love. Here are some of my favorite memories with you.
+            I love you my Sweetheart. Wishing you the most wonderful day filled with joy and love. Here is a special memory of us.
         </p>
 
-        <div class="video-container animate__animated animate__fadeInUp animate__delay-3s">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-        </div>
-
-        <div class="gallery">
-            <div class="photo-card animate__animated animate__zoomIn animate__delay-4s">
-                <img src="https://via.placeholder.com/400x300?text=Photo+1" alt="Memory 1">
-            </div>
-            <div class="photo-card animate__animated animate__zoomIn animate__delay-4s">
-                <img src="https://via.placeholder.com/400x300?text=Photo+2" alt="Memory 2">
-            </div>
-            <div class="photo-card animate__animated animate__zoomIn animate__delay-5s">
-                <img src="https://via.placeholder.com/400x300?text=Photo+3" alt="Memory 3">
-            </div>
-            <div class="photo-card animate__animated animate__zoomIn animate__delay-5s">
-                <img src="https://via.placeholder.com/400x300?text=Photo+4" alt="Memory 4">
-            </div>
+        <div class="video-player-local animate__animated animate__fadeInUp animate__delay-3s">
+            <video autoplay loop muted playsinline>
+                <source src="memory.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
         
         <footer class="animate__animated animate__fadeIn animate__delay-5s">
