@@ -11,10 +11,11 @@
 
     <style>
         :root {
-            --primary-bg: #fdf2f8; /* Soft pink */
-            --text-color: #374151;
-            --accent-color: #db2777;
-            --heart-color: #ec4899;
+            /* Changed to soft romantic blues */
+            --primary-bg: #e6f2ff; 
+            --text-color: #334155;
+            --accent-color: #3b82f6; 
+            --heart-color: #ec4899; /* Kept hearts pink/red for romantic contrast */
         }
 
         body, html {
@@ -67,7 +68,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+            /* Romantic dreamy blue gradient */
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
             transition: opacity 1s ease-out, visibility 1s ease-out;
             z-index: 10;
         }
@@ -87,7 +89,8 @@
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 10px 25px rgba(219, 39, 119, 0.4);
+            /* Updated to blue shadow */
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
             transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
             position: relative;
             overflow: hidden;
@@ -96,8 +99,9 @@
 
         .btn:hover {
             transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 15px 30px rgba(219, 39, 119, 0.5);
-            background-color: #be185d;
+            /* Updated to blue shadow and darker blue background on hover */
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.5);
+            background-color: #2563eb;
         }
 
         .btn.animate__pulse {
@@ -200,7 +204,7 @@
     <div id="landing">
         <img src="landing-bubu.gif" alt="Bubu Dudu Waiting" class="bubu-dudu-landing animate__animated animate__bounceInDown">
         
-        <h2 class="animate__animated animate__fadeInUp animate__delay-1s" style="color: white; font-size: 2.2rem; margin-bottom: 15px; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">
+        <h2 class="animate__animated animate__fadeInUp animate__delay-1s" style="color: #1e3a8a; font-size: 2.2rem; margin-bottom: 15px; text-shadow: 1px 1px 3px rgba(255,255,255,0.5);">
             I have something special for you......
         </h2>
         
@@ -269,7 +273,7 @@
             const music = document.getElementById('bg-music');
             music.play().catch(e => console.log("Audio autoplay blocked, but user interaction allows it."));
 
-            // B. Trigger Intense Confetti Burst
+            // B. Trigger Intense Confetti Burst (Updated to Blue/White colors)
             var duration = 5 * 1000; 
             var end = Date.now() + duration;
 
@@ -279,14 +283,14 @@
                     angle: 60,
                     spread: 70,
                     origin: { x: 0, y: 0.6 }, 
-                    colors: ['#db2777', '#fbc2eb', '#ffffff', '#ec4899']
+                    colors: ['#3b82f6', '#93c5fd', '#ffffff', '#60a5fa']
                 });
                 confetti({
                     particleCount: 7,
                     angle: 120,
                     spread: 70,
                     origin: { x: 1, y: 0.6 }, 
-                    colors: ['#db2777', '#fbc2eb', '#ffffff', '#ec4899']
+                    colors: ['#3b82f6', '#93c5fd', '#ffffff', '#60a5fa']
                 });
 
                 if (Date.now() < end) {
