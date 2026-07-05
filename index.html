@@ -37,8 +37,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none; /* Let clicks pass through */
-            z-index: 0; /* Behind everything */
+            pointer-events: none;
+            z-index: 0;
             overflow: hidden;
         }
 
@@ -71,7 +71,14 @@
             align-items: center;
             background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
             transition: opacity 1s ease-out, visibility 1s ease-out;
-            z-index: 10; /* Above the floating background */
+            z-index: 10;
+        }
+
+        /* Bubu Dudu Landing Image */
+        .bubu-dudu-landing {
+            width: 250px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
         }
 
         .btn {
@@ -86,6 +93,7 @@
             transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
             position: relative;
             overflow: hidden;
+            margin-top: 20px;
         }
 
         .btn:hover {
@@ -94,7 +102,6 @@
             background-color: #be185d;
         }
 
-        /* Enhanced Pulse effect on the button */
         .btn.animate__pulse {
             animation-duration: 1.5s;
         }
@@ -117,6 +124,32 @@
             display: block;
             visibility: visible;
             opacity: 1;
+        }
+
+        /* Bubu Dudu Main Content Image */
+        .bubu-dudu-main {
+            width: 180px;
+            margin: -20px auto 10px auto;
+            display: block;
+        }
+
+        /* Corner Bubu Dudu Animations */
+        .bubu-dudu-corner {
+            position: fixed;
+            bottom: 20px;
+            width: 120px;
+            z-index: 5;
+            pointer-events: none;
+            opacity: 0; /* Hidden initially, shown after click */
+            transition: opacity 2s ease-in;
+        }
+
+        .bubu-dudu-corner.left {
+            left: 20px;
+        }
+
+        .bubu-dudu-corner.right {
+            right: 20px;
         }
 
         h1 {
@@ -165,7 +198,7 @@
         /* --- Responsive Video --- */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%; 
             height: 0;
             overflow: hidden;
             border-radius: 20px;
@@ -198,48 +231,58 @@
 </head>
 <body>
 
-    <!-- Continuous Floating Background Elements (Hearts, Cakes, Candles) -->
+    <!-- Continuous Floating Background Elements -->
     <div id="floating-container"></div>
 
-    <!-- Audio Element (Hidden) -->
-    <!-- Replace 'your-audio-file.mp3' with a link to a song, or keep it local in the GitHub repo -->
+    <!-- Audio Element -->
     <audio id="bg-music" loop src="your-audio-file.mp3"></audio>
+
+    <!-- Corner Bubu Dudu (Hidden on Landing, Revealed on Main) -->
+    <!-- You can swap these Tenor links if you find other Bubu Dudu GIFs you prefer -->
+    <img src="https://media.tenor.com/V7h4I0eYFugAAAAi/bubu-dudu-kisses.gif" class="bubu-dudu-corner left" id="corner-left" alt="Bubu Dudu">
+    <img src="https://media.tenor.com/15ZtG_J90JIAAAAi/bubu-dudu-love.gif" class="bubu-dudu-corner right" id="corner-right" alt="Bubu Dudu">
 
     <!-- Landing Screen -->
     <div id="landing">
-        <h2 class="animate__animated animate__fadeInDown animate__slow" style="color: white; font-size: 2.2rem; margin-bottom: 35px; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">
+        <!-- Cute Bubu Dudu Welcome Animation -->
+        <img src="https://media.tenor.com/qE4JvM8807QAAAAi/bubu-dudu-bubu.gif" alt="Bubu Dudu Waiting" class="bubu-dudu-landing animate__animated animate__bounceInDown">
+        
+        <h2 class="animate__animated animate__fadeInUp animate__delay-1s" style="color: white; font-size: 2.2rem; margin-bottom: 15px; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">
             I have something special for you...
         </h2>
-        <!-- The button pulses continuously until clicked -->
-        <button class="btn animate__animated animate__pulse animate__infinite" onclick="revealSurprise()">
+        
+        <button class="btn animate__animated animate__pulse animate__infinite animate__delay-2s" onclick="revealSurprise()">
             Click to Open ❤
         </button>
     </div>
 
     <!-- Main Content -->
     <div id="main-content">
-        <h1 class="animate__animated animate__heartBeat animate__delay-1s">Happy Birthday, My Love!</h1>
-        <p class="subtitle animate__animated animate__fadeIn animate__delay-2s">
+        <!-- Cute Bubu Dudu Hugging Header -->
+        <img src="https://media.tenor.com/gA3qHw5KxO0AAAAi/bubu-dudu-bubu.gif" alt="Bubu Dudu Love" class="bubu-dudu-main animate__animated animate__zoomIn animate__delay-1s">
+        
+        <h1 class="animate__animated animate__heartBeat animate__delay-2s">Happy Birthday, My Love!</h1>
+        <p class="subtitle animate__animated animate__fadeIn animate__delay-3s">
             I love you my Sweetheart. Wishing you the most wonderful day filled with joy and love. Here are some of my favorite memories with you.
         </p>
 
         <!-- Video Section (Optional) -->
-        <div class="video-container animate__animated animate__fadeInUp animate__delay-2s">
+        <div class="video-container animate__animated animate__fadeInUp animate__delay-3s">
             <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
         </div>
 
         <!-- Photo Gallery -->
         <div class="gallery">
-            <div class="photo-card animate__animated animate__zoomIn animate__delay-3s">
+            <div class="photo-card animate__animated animate__zoomIn animate__delay-4s">
                 <img src="https://via.placeholder.com/400x300?text=Photo+1" alt="Memory 1">
             </div>
-            <div class="photo-card animate__animated animate__zoomIn animate__delay-3s">
+            <div class="photo-card animate__animated animate__zoomIn animate__delay-4s">
                 <img src="https://via.placeholder.com/400x300?text=Photo+2" alt="Memory 2">
             </div>
-            <div class="photo-card animate__animated animate__zoomIn animate__delay-4s">
+            <div class="photo-card animate__animated animate__zoomIn animate__delay-5s">
                 <img src="https://via.placeholder.com/400x300?text=Photo+3" alt="Memory 3">
             </div>
-            <div class="photo-card animate__animated animate__zoomIn animate__delay-4s">
+            <div class="photo-card animate__animated animate__zoomIn animate__delay-5s">
                 <img src="https://via.placeholder.com/400x300?text=Photo+4" alt="Memory 4">
             </div>
         </div>
@@ -252,40 +295,33 @@
     <script>
         // --- 1. Continuous Floating Background Elements ---
         const container = document.getElementById('floating-container');
-        // A mix of romantic and birthday emojis
         const items = ['❤', '💖', '🎂', '🕯️', '🎈', '✨', '🌹'];
 
         function createFloatingItem() {
             const item = document.createElement('div');
             item.classList.add('floating-item');
             
-            // Randomly select an emoji
             item.innerText = items[Math.floor(Math.random() * items.length)];
             
-            // Randomize starting position (horizontal), duration, and size
             item.style.left = Math.random() * 100 + 'vw';
-            item.style.animationDuration = Math.random() * 10 + 10 + 's'; // Between 10 and 20 seconds
-            item.style.fontSize = Math.random() * 1 + 1 + 'rem'; // Between 1 and 2 rem
+            item.style.animationDuration = Math.random() * 10 + 10 + 's'; 
+            item.style.fontSize = Math.random() * 1 + 1 + 'rem'; 
             
-            // Randomly assign a pink/red color variation to some items
             if (Math.random() > 0.5) {
                 item.style.color = 'var(--heart-color)';
             } else if (Math.random() > 0.8) {
-              item.style.color = '#f43f5e'; // rose-500
+              item.style.color = '#f43f5e'; 
             }
 
             container.appendChild(item);
 
-            // Remove the element after the animation finishes to keep the DOM clean
             setTimeout(() => {
                 item.remove();
-            }, 20000); // Must be longer than the maximum animation duration
+            }, 20000); 
         }
 
-        // Create new floating items continuously
-        setInterval(createFloatingItem, 400); // Add a new item every 400ms
+        setInterval(createFloatingItem, 400); 
 
-        // Initial burst of items on load
         for (let i = 0; i < 20; i++) {
           setTimeout(createFloatingItem, i * 100);
         }
@@ -297,24 +333,22 @@
             music.play().catch(e => console.log("Audio autoplay blocked, but user interaction allows it."));
 
             // B. Trigger Intense Confetti Burst
-            var duration = 5 * 1000; // 5 seconds
+            var duration = 5 * 1000; 
             var end = Date.now() + duration;
 
             (function frame() {
-                // Launch confetti from the left
                 confetti({
                     particleCount: 7,
                     angle: 60,
                     spread: 70,
-                    origin: { x: 0, y: 0.6 }, // Slightly lower starting point
+                    origin: { x: 0, y: 0.6 }, 
                     colors: ['#db2777', '#fbc2eb', '#ffffff', '#ec4899']
                 });
-                // Launch confetti from the right
                 confetti({
                     particleCount: 7,
                     angle: 120,
                     spread: 70,
-                    origin: { x: 1, y: 0.6 }, // Slightly lower starting point
+                    origin: { x: 1, y: 0.6 }, 
                     colors: ['#db2777', '#fbc2eb', '#ffffff', '#ec4899']
                 });
 
@@ -323,18 +357,23 @@
                 }
             }());
 
-            // C. Transition: Hide landing, show main content
+            // C. Transition: Hide landing, show main content & reveal corner GIFs
             const landing = document.getElementById('landing');
             const mainContent = document.getElementById('main-content');
+            const cornerLeft = document.getElementById('corner-left');
+            const cornerRight = document.getElementById('corner-right');
             
             landing.style.opacity = '0';
             landing.style.visibility = 'hidden';
             
-            // Add a small delay before showing content for the fade effect
             setTimeout(() => {
                 landing.style.display = 'none';
                 mainContent.classList.add('show');
-            }, 600); // Slightly faster delay for smoother feeling
+                
+                // Show the corner Bubu Dudu bears
+                cornerLeft.style.opacity = '1';
+                cornerRight.style.opacity = '1';
+            }, 600); 
         }
     </script>
 </body>
